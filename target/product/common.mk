@@ -4,8 +4,6 @@ SUPERUSER_EMBEDDED := true
 # prebuilts
 PRODUCT_PACKAGES += \
    android.hardware.usb.host.xml \
-   Superuser \
-   su 
 
 #permisions
 PRODUCT_PACKAGES += \
@@ -18,7 +16,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    libAppDataSearch.so \
    libgames_rtmp_jni.so \
-   libncurses.so \
+   libncurses.so 
+
+# user/idc
+PRODUCT_PACKAGES += \
    mxt224_ts_input.idc
 
 # app
