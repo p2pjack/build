@@ -1,5 +1,14 @@
 #SuperUser
+# Embed superuser into settings
 SUPERUSER_EMBEDDED := true
+
+# Enable root for adb+apps
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=3
+
+# Superuser
+PRODUCT_PACKAGES += \
+    su
 
 # prebuilts
 PRODUCT_PACKAGES += \
