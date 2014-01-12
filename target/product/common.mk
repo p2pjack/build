@@ -1,15 +1,3 @@
-#SuperUser
-# Embed superuser into settings
-SUPERUSER_EMBEDDED := true
-
-# Enable root for adb+apps
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=3
-
-# Superuser
-PRODUCT_PACKAGES += \
-    su
-
 # prebuilts
 PRODUCT_PACKAGES += \
    android.hardware.usb.host.xml \
@@ -33,7 +21,9 @@ PRODUCT_PACKAGES += \
 
 # app
 PRODUCT_PACKAGES += \
-   GoogleContactsSyncAdapter
+   GoogleContactsSyncAdapter \
+   Superuser \
+   su
 
 # priv app
 PRODUCT_PACKAGES += \
@@ -59,3 +49,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
    debug.sf.hw = 1 \
    video.accelerate.hw=1 \
    persist.sys.use_dithering = 1
+
+
+PRODUCT_PACKAGES += \
+    99SuperSUDaemon \
+    install-recovery-2.sh
